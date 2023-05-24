@@ -28,5 +28,8 @@ app.get("/", (_, res) => {
 app.get("/about", (_, res) => {
   res.sendFile(`${publicPath}/about.html`);
 });
+app.get("/*", (_, res) => {
+  res.sendFile(`${publicPath}/about.html`);
+});
 
 app.listen(5000);
